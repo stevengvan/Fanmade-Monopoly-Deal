@@ -1,0 +1,249 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.menu {
+  height: 10%;
+  padding-right: 10px;
+  background-color: brown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.quitCon {
+  background-color: crimson;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 100%;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.quitText {
+  color: white;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.quitCon:hover {
+  background-color: dodgerblue;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.quitCon:hover * {
+  color: black;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.menuText {
+  color: white;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.opponents {
+  height: 20%;
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.opponent {
+  height: 100%;
+  width: auto;
+}
+.opponentName {
+  color: black;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 10px;
+}
+.opponentInventory {
+  max-height: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.opponentPile {
+  background-color: blue;
+  margin-right: 10px;
+  height: 100%;
+  width: 100px;
+  padding: 0 10px 0 10px;
+}
+.opponentPile:hover {
+  cursor: pointer;
+}
+.opponentPileCards {
+  max-height: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+.opponentPileCards * {
+  width: 20%;
+}
+.opponentCards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.opponentCardsCount {
+  position: absolute;
+  font-size: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aqua;
+  -webkit-text-stroke: 5px black;
+}
+.opponentCardsImage {
+}
+
+.cardPile {
+  height: 40%;
+  background-color: chartreuse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#deck {
+  margin-right: 20px;
+}
+#deck:hover {
+  cursor: pointer;
+}
+#pile:hover {
+  cursor: pointer;
+}
+.card {
+  height: 100%;
+}
+
+.user {
+  height: 30%;
+  background-color: goldenrod;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100vw;
+}
+.hand {
+  height: 100%;
+  width: 100%;
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.heldCard {
+  margin-left: -100px;
+}
+.playerPile {
+  background-color: blue;
+  height: 100%;
+  width: 500px;
+  padding: 0 10px 0 10px;
+}
+.playerPile:hover {
+  cursor: pointer;
+}
+.playerPileCards {
+  max-height: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+.playerPileCards * {
+  width: auto;
+}
+.playerCards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.playerCardsCount {
+  position: absolute;
+  font-size: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aqua;
+  -webkit-text-stroke: 5px black;
+}
+.playerCardsImage {
+}
