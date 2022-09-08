@@ -516,7 +516,7 @@ export default function Game() {
   }
 
   function returnCard(card_name, card_type) {
-    let card = deck.find((card) => card.name == card_name);
+    let card = deck.find((card) => card.name === card_name);
     let type = null;
 
     switch (card_type) {
@@ -532,10 +532,13 @@ export default function Game() {
       case "Action":
         type = ACTIONS;
         break;
+      default:
+        type = MONEY;
+        break;
     }
 
     if (
-      card.duplicate < type.find((card) => card.name == card_name).duplicate
+      card.duplicate < type.find((card) => card.name === card_name).duplicate
     ) {
       ++card.duplicate;
       return "Returned card to deck";
@@ -546,7 +549,13 @@ export default function Game() {
 
   return (
     <div className="container">
-      {pileModal && <PileModal isOpen={setPileModal} player={playerPile} />}
+      {pileModal && (
+        <PileModal
+          open={pileModal}
+          setOpen={setPileModal}
+          player={playerPile}
+        />
+      )}
       <div className="menu">
         <div className="quitCon">
           <p className="quitText">QUIT</p>
@@ -571,26 +580,32 @@ export default function Game() {
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
               </div>
             </div>
@@ -599,6 +614,7 @@ export default function Game() {
               <img
                 className="card opponentCardsImage"
                 src={require("../assets/Cards/backside.png")}
+                alt={"card in pile"}
               />
             </div>
           </div>
@@ -618,18 +634,22 @@ export default function Game() {
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
               </div>
             </div>
@@ -638,6 +658,7 @@ export default function Game() {
               <img
                 className="card opponentCardsImage"
                 src={require("../assets/Cards/backside.png")}
+                alt={"card in pile"}
               />
             </div>
           </div>
@@ -657,6 +678,7 @@ export default function Game() {
                 <img
                   className="card opponentCardsImage"
                   src={require("../assets/Cards/backside.png")}
+                  alt={"card in pile"}
                 />
               </div>
             </div>
@@ -665,6 +687,7 @@ export default function Game() {
               <img
                 className="card opponentCardsImage"
                 src={require("../assets/Cards/backside.png")}
+                alt={"card in pile"}
               />
             </div>
           </div>
@@ -677,41 +700,53 @@ export default function Game() {
           className="card"
           onClick={() => pickCard()}
           src={require("../assets/Cards/backside.png")}
+          alt={"card in pile"}
         />
 
         <img
           id="pile"
           className="card"
           src={require("../assets/Cards/Money/money_1.png")}
+          alt={"card in pile"}
         />
       </div>
 
       <div className="user">
         <div className="hand">
-          <img className="card" src={require("../assets/Cards/backside.png")} />
           <img
-            className="card heldCard"
+            className="card"
             src={require("../assets/Cards/backside.png")}
+            alt={"first card"}
           />
           <img
             className="card heldCard"
             src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
           />
           <img
             className="card heldCard"
             src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
           />
           <img
             className="card heldCard"
             src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
           />
           <img
             className="card heldCard"
             src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
           />
           <img
             className="card heldCard"
             src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
+          />
+          <img
+            className="card heldCard"
+            src={require("../assets/Cards/backside.png")}
+            alt={"card in pile"}
           />
         </div>
         <div
@@ -726,26 +761,32 @@ export default function Game() {
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
             <img
               className="card playerCardsImage"
               src={require("../assets/Cards/backside.png")}
+              alt={"card in pile"}
             />
           </div>
         </div>
