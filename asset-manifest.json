@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Fanmade-Monopoly-Deal/static/css/main.085f5081.css",
+    "main.js": "/Fanmade-Monopoly-Deal/static/js/main.f5522738.js",
+    "static/js/787.325cd123.chunk.js": "/Fanmade-Monopoly-Deal/static/js/787.325cd123.chunk.js",
+    "static/media/backside.png": "/Fanmade-Monopoly-Deal/static/media/backside.05eaa63978f5754bda3b.png",
+    "static/media/money_1.png": "/Fanmade-Monopoly-Deal/static/media/money_1.cd5d16044168048a3128.png",
+    "index.html": "/Fanmade-Monopoly-Deal/index.html",
+    "main.085f5081.css.map": "/Fanmade-Monopoly-Deal/static/css/main.085f5081.css.map",
+    "main.f5522738.js.map": "/Fanmade-Monopoly-Deal/static/js/main.f5522738.js.map",
+    "787.325cd123.chunk.js.map": "/Fanmade-Monopoly-Deal/static/js/787.325cd123.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.085f5081.css",
+    "static/js/main.f5522738.js"
+  ]
+}
